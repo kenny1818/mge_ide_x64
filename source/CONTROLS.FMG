@@ -1,0 +1,1693 @@
+*HMGS-MINIGUI-IDE Two-Way Form Designer Generated Code
+*OPEN SOURCE PROJECT 2005-2016 Walter Formigoni http://sourceforge.net/projects/hmgs-minigui/
+
+DEFINE WINDOW TEMPLATE AT 0 , 0 WIDTH 1048 HEIGHT 184 VIRTUAL WIDTH NIL VIRTUAL HEIGHT NIL MINWIDTH 1040 MINHEIGHT 180 TITLE NIL ICON "AMAINICON" MAIN CURSOR NIL ON INIT {|| BuildMenu(), wSizeMainForm()} ON RELEASE NIL ON INTERACTIVECLOSE exit() ON MOUSECLICK NIL ON MOUSEDRAG NIL ON MOUSEMOVE NIL ON MOVE NIL ON DROPFILES NIL ON SIZE NIL ON MAXIMIZE NIL ON MINIMIZE NIL ON PAINT NIL BACKCOLOR {181,216,248} NOTIFYICON NIL NOTIFYTOOLTIP NIL ON NOTIFYCLICK NIL ON NOTIFYBALLOONCLICK NIL ON GOTFOCUS NIL ON LOSTFOCUS NIL ON SCROLLUP NIL ON SCROLLDOWN NIL ON SCROLLLEFT NIL ON SCROLLRIGHT NIL ON HSCROLLBOX NIL ON VSCROLLBOX NIL
+
+     DEFINE STATUSBAR FONT "Arial" SIZE 9
+            STATUSITEM "Right Click to Move/Size Controls" WIDTH 150
+            STATUSITEM "Copy control->" WIDTH 150
+            STATUSITEM "" WIDTH 100
+            STATUSITEM "" WIDTH 100
+            STATUSITEM "" WIDTH 100
+            STATUSITEM "" WIDTH 100
+     END STATUSBAR
+
+     DEFINE FRAME Frame_1
+            ROW    1
+            COL    3
+            WIDTH  107
+            HEIGHT 98
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            CAPTION "Project"
+            BACKCOLOR {181,226,248}
+            FONTCOLOR NIL
+            OPAQUE .T.
+            TRANSPARENT .T.
+            INVISIBLE .F.
+     END FRAME  
+
+     DEFINE BUTTONEX XBUTTONEX_1
+            ROW    30
+            COL    10
+            WIDTH  30
+            HEIGHT 30
+            PICTURE NIL
+            ICON "PROJECTNEW"
+            ACTION new()
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            FONTCOLOR NIL
+            VERTICAL .F.
+            LEFTTEXT .F.
+            UPPERTEXT .F.
+            ADJUST .F.
+            TOOLTIP "New Project"
+            BACKCOLOR NIL
+            NOHOTLIGHT .F.
+            FLAT .F.
+            NOTRANSPARENT .F.
+            NOXPSTYLE .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            TABSTOP .T.
+            HANDCURSOR .F.
+            HELPID NIL
+            VISIBLE .T.
+            DEFAULT .F.
+     END BUTTONEX  
+
+     DEFINE BUTTONEX XBUTTONEX_2
+            ROW    30
+            COL    40
+            WIDTH  30
+            HEIGHT 30
+            PICTURE NIL
+            ICON "PROJECTOPEN"
+            ACTION open()
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            FONTCOLOR NIL
+            VERTICAL .F.
+            LEFTTEXT .F.
+            UPPERTEXT .F.
+            ADJUST .F.
+            TOOLTIP "Open Project"
+            BACKCOLOR NIL
+            NOHOTLIGHT .F.
+            FLAT .F.
+            NOTRANSPARENT .F.
+            NOXPSTYLE .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            TABSTOP .T.
+            HANDCURSOR .F.
+            HELPID NIL
+            VISIBLE .T.
+            DEFAULT .F.
+     END BUTTONEX  
+
+     DEFINE BUTTONEX XBUTTONEX_3
+            ROW    30
+            COL    70
+            WIDTH  30
+            HEIGHT 30
+            PICTURE NIL
+            ICON "PROJECTCLOSE"
+            ACTION ProjectClose()
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            FONTCOLOR NIL
+            VERTICAL .F.
+            LEFTTEXT .F.
+            UPPERTEXT .F.
+            ADJUST .F.
+            TOOLTIP "Close Project"
+            BACKCOLOR NIL
+            NOHOTLIGHT .F.
+            FLAT .F.
+            NOTRANSPARENT .F.
+            NOXPSTYLE .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            TABSTOP .T.
+            HANDCURSOR .F.
+            HELPID NIL
+            VISIBLE .T.
+            DEFAULT .F.
+     END BUTTONEX  
+
+     DEFINE BUTTONEX XBUTTONEX_4
+            ROW    60
+            COL    40
+            WIDTH  30
+            HEIGHT 30
+            PICTURE NIL
+            ICON "FORMNEW"
+            ACTION newform()
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            FONTCOLOR NIL
+            VERTICAL .F.
+            LEFTTEXT .F.
+            UPPERTEXT .F.
+            ADJUST .F.
+            TOOLTIP "New Form"
+            BACKCOLOR NIL
+            NOHOTLIGHT .F.
+            FLAT .F.
+            NOTRANSPARENT .F.
+            NOXPSTYLE .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            TABSTOP .T.
+            HANDCURSOR .F.
+            HELPID NIL
+            VISIBLE .T.
+            DEFAULT .F.
+     END BUTTONEX  
+
+     DEFINE BUTTONEX XBUTTONEX_5
+            ROW    60
+            COL    10
+            WIDTH  30
+            HEIGHT 30
+            PICTURE NIL
+            ICON "MODULENEW"
+            ACTION newmodule()
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            FONTCOLOR NIL
+            VERTICAL .F.
+            LEFTTEXT .F.
+            UPPERTEXT .F.
+            ADJUST .F.
+            TOOLTIP "New Module"
+            BACKCOLOR NIL
+            NOHOTLIGHT .F.
+            FLAT .F.
+            NOTRANSPARENT .F.
+            NOXPSTYLE .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            TABSTOP .T.
+            HANDCURSOR .F.
+            HELPID NIL
+            VISIBLE .T.
+            DEFAULT .F.
+     END BUTTONEX  
+
+     DEFINE FRAME Frame_2
+            ROW    1
+            COL    115
+            WIDTH  77
+            HEIGHT 98
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            CAPTION "Build"
+            BACKCOLOR {181,226,248}
+            FONTCOLOR NIL
+            OPAQUE .T.
+            TRANSPARENT .T.
+            INVISIBLE .F.
+     END FRAME  
+
+     DEFINE BUTTONEX XBUTTONEX_6
+            ROW    30
+            COL    140
+            WIDTH  30
+            HEIGHT 30
+            PICTURE NIL
+            ICON "PROJECTBLD"
+            ACTION RUN()
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            FONTCOLOR NIL
+            VERTICAL .F.
+            LEFTTEXT .F.
+            UPPERTEXT .F.
+            ADJUST .F.
+            TOOLTIP "Build using traditional batch processing.."
+            BACKCOLOR NIL
+            NOHOTLIGHT .F.
+            FLAT .F.
+            NOTRANSPARENT .F.
+            NOXPSTYLE .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            TABSTOP .T.
+            HANDCURSOR .F.
+            HELPID NIL
+            VISIBLE .T.
+            DEFAULT .F.
+     END BUTTONEX  
+
+     DEFINE BUTTONEX BUTTON_HBMK2Build
+            ROW    60
+            COL    140
+            WIDTH  30
+            HEIGHT 30
+            PICTURE NIL
+            ICON "PROJECTBLD2"
+            ACTION HBMK2BUILD()
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            FONTCOLOR NIL
+            VERTICAL .F.
+            LEFTTEXT .F.
+            UPPERTEXT .F.
+            ADJUST .F.
+            TOOLTIP "BUILD using Harbour's official make program (hbmk2)"
+            BACKCOLOR NIL
+            NOHOTLIGHT .F.
+            FLAT .F.
+            NOTRANSPARENT .F.
+            NOXPSTYLE .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            TABSTOP .T.
+            HANDCURSOR .F.
+            HELPID NIL
+            VISIBLE .T.
+            DEFAULT .F.
+     END BUTTONEX  
+
+     DEFINE FRAME Frame_3
+            ROW    1
+            COL    892
+            WIDTH  135
+            HEIGHT 98
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            CAPTION "Controls actions"
+            BACKCOLOR {181,226,238}
+            FONTCOLOR NIL
+            OPAQUE .T.
+            TRANSPARENT .T.
+            INVISIBLE .F.
+     END FRAME  
+
+     DEFINE CHECKBUTTON Control_01
+            ROW    30
+            COL    897
+            WIDTH  30
+            HEIGHT 30
+            CAPTION ""
+            VALUE .T.
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP "DeSelect Object"
+            ONCHANGE Control_Click(1)
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            PICTURE "BITMAP8"
+     END CHECKBUTTON  
+
+     DEFINE CHECKBUTTON Control_40
+            ROW    30
+            COL    927
+            WIDTH  30
+            HEIGHT 30
+            CAPTION ""
+            VALUE .F.
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP "Copy Control"
+            ONCHANGE CopyControl()
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            PICTURE "BITMAP61"
+     END CHECKBUTTON  
+
+     DEFINE BUTTONEX XBUTTONEX_8
+            ROW    30
+            COL    957
+            WIDTH  30
+            HEIGHT 30
+            PICTURE NIL
+            ICON "CONTROLDEL"
+            ACTION xdeletecontrol()
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            FONTCOLOR NIL
+            VERTICAL .F.
+            LEFTTEXT .F.
+            UPPERTEXT .F.
+            ADJUST .F.
+            TOOLTIP "Delete Control"
+            BACKCOLOR NIL
+            NOHOTLIGHT .F.
+            FLAT .F.
+            NOTRANSPARENT .F.
+            NOXPSTYLE .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            TABSTOP .T.
+            HANDCURSOR .F.
+            HELPID NIL
+            VISIBLE .T.
+            DEFAULT .F.
+     END BUTTONEX  
+
+     DEFINE BUTTONEX XBUTTONEX_9
+            ROW    65
+            COL    897
+            WIDTH  30
+            HEIGHT 30
+            PICTURE NIL
+            ICON "CONTROLORDER"
+            ACTION CONTROLORDER()
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            FONTCOLOR NIL
+            VERTICAL .F.
+            LEFTTEXT .F.
+            UPPERTEXT .F.
+            ADJUST .F.
+            TOOLTIP "Control Order"
+            BACKCOLOR NIL
+            NOHOTLIGHT .F.
+            FLAT .F.
+            NOTRANSPARENT .F.
+            NOXPSTYLE .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            TABSTOP .T.
+            HANDCURSOR .F.
+            HELPID NIL
+            VISIBLE .T.
+            DEFAULT .F.
+     END BUTTONEX  
+
+     DEFINE BUTTONEX XBUTTONEX_16
+            ROW    65
+            COL    987
+            WIDTH  30
+            HEIGHT 30
+            PICTURE NIL
+            ICON "CODEPREVIEW"
+            ACTION viewformcode()
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            FONTCOLOR NIL
+            VERTICAL .F.
+            LEFTTEXT .F.
+            UPPERTEXT .F.
+            ADJUST .F.
+            TOOLTIP "Code Viewer/Editor"
+            BACKCOLOR NIL
+            NOHOTLIGHT .F.
+            FLAT .F.
+            NOTRANSPARENT .F.
+            NOXPSTYLE .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            TABSTOP .T.
+            HANDCURSOR .F.
+            HELPID NIL
+            VISIBLE .T.
+            DEFAULT .F.
+     END BUTTONEX  
+
+     DEFINE BUTTONEX XBUTTONEX_17
+            ROW    30
+            COL    987
+            WIDTH  30
+            HEIGHT 30
+            PICTURE NIL
+            ICON "COLORIZE"
+            ACTION definecolors()
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            FONTCOLOR NIL
+            VERTICAL .F.
+            LEFTTEXT .F.
+            UPPERTEXT .F.
+            ADJUST .F.
+            TOOLTIP "Change Colors"
+            BACKCOLOR NIL
+            NOHOTLIGHT .F.
+            FLAT .F.
+            NOTRANSPARENT .F.
+            NOXPSTYLE .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            TABSTOP .T.
+            HANDCURSOR .F.
+            HELPID NIL
+            VISIBLE .T.
+            DEFAULT .F.
+     END BUTTONEX  
+
+     DEFINE BUTTONEX XBUTTONEX_18
+            ROW    65
+            COL    927
+            WIDTH  30
+            HEIGHT 30
+            PICTURE NIL
+            ICON "REPOSITION"
+            ACTION iif(IsWindowDefined(Form_1), ControlPosSTART(), )
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            FONTCOLOR NIL
+            VERTICAL .F.
+            LEFTTEXT .F.
+            UPPERTEXT .F.
+            ADJUST .F.
+            TOOLTIP "Control Position Dialog"
+            BACKCOLOR NIL
+            NOHOTLIGHT .F.
+            FLAT .F.
+            NOTRANSPARENT .F.
+            NOXPSTYLE .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            TABSTOP .T.
+            HANDCURSOR .F.
+            HELPID NIL
+            VISIBLE .T.
+            DEFAULT .F.
+     END BUTTONEX  
+
+  DEFINE TAB XTab_3 AT 1,200 WIDTH 682 HEIGHT 98 VALUE 1 FONT "Arial" SIZE 9 TOOLTIP "" FLAT  ON CHANGE Nil BACKCOLOR {181,216,238}
+
+    PAGE 'Controls'
+
+        DEFINE CHECKBUTTON Control_02
+               ROW    27
+               COL    5
+               WIDTH  32
+               HEIGHT 32
+               CAPTION "button"
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Button"
+               ONCHANGE Control_Click(2)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP9"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_03
+               ROW    27
+               COL    133
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "CheckBox"
+               ONCHANGE Control_Click(3)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP10"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_04
+               ROW    27
+               COL    69
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Listbox"
+               ONCHANGE Control_Click(4)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP11"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_05
+               ROW    27
+               COL    101
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "ComboBox"
+               ONCHANGE Control_Click(5)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP12"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_06
+               ROW    27
+               COL    37
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "CheckButton"
+               ONCHANGE Control_Click(6)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP13"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_07
+               ROW    27
+               COL    165
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Grid"
+               ONCHANGE Control_Click(7)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP14"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_08
+               ROW    27
+               COL    197
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Slider"
+               ONCHANGE Control_Click(8)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP15"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_09
+               ROW    27
+               COL    229
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Spinner"
+               ONCHANGE Control_Click(9)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP16"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_12
+               ROW    27
+               COL    325
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "DatePicker"
+               ONCHANGE Control_Click(12)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP19"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_13
+               ROW    27
+               COL    357
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "TextBox"
+               ONCHANGE Control_Click(13)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP20"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_14
+               ROW    27
+               COL    389
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "EditBox"
+               ONCHANGE Control_Click(14)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP21"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_39
+               ROW    27
+               COL    421
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Checklistbox"
+               ONCHANGE Control_Click(39)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP11"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_15
+               ROW    60
+               COL    5
+               WIDTH  32
+               HEIGHT 32
+               CAPTION "Label"
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Label"
+               ONCHANGE Control_Click(15)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP22"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_16
+               ROW    60
+               COL    37
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Browse"
+               ONCHANGE Control_Click(16)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP23"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_17
+               ROW    60
+               COL    69
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "RadioGroup"
+               ONCHANGE Control_Click(17)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP24"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_18
+               ROW    60
+               COL    101
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Frame"
+               ONCHANGE Control_Click(18)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP25"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_19
+               ROW    60
+               COL    133
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Tab"
+               ONCHANGE Control_Click(19)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP26"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_20
+               ROW    60
+               COL    165
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "AnimateBox"
+               ONCHANGE Control_Click(20)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP27"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_21
+               ROW    60
+               COL    197
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "HyperLink"
+               ONCHANGE Control_Click(21)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP28"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_22
+               ROW    60
+               COL    229
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "MonthCalendar"
+               ONCHANGE Control_Click(22)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP29"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_23
+               ROW    60
+               COL    261
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "RichEditBox"
+               ONCHANGE Control_Click(23)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP30"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_24
+               ROW    60
+               COL    293
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "ProgressBar"
+               ONCHANGE Control_Click(24)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP31"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_25
+               ROW    60
+               COL    325
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Player"
+               ONCHANGE Control_Click(25)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP32"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_26
+               ROW    60
+               COL    357
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "IpAddress"
+               ONCHANGE Control_Click(26)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP33"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_27
+               ROW    60
+               COL    389
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Timer"
+               ONCHANGE Control_Click(27)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP34"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_28
+               ROW    27
+               COL    512
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "ButtonEX"
+               ONCHANGE Control_Click(28)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP9"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_29
+               ROW    27
+               COL    544
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "ComboBoxEX"
+               ONCHANGE Control_Click(29)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP12"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_30
+               ROW    27
+               COL    576
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "BtnTextBox"
+               ONCHANGE Control_Click(30)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP40"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_31
+               ROW    27
+               COL    608
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "HotKeyBox"
+               ONCHANGE Control_Click(31)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP17"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_32
+               ROW    27
+               COL    640
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "GetBox"
+               ONCHANGE Control_Click(32)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP20"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_33
+               ROW    60
+               COL    512
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "TimePicker"
+               ONCHANGE Control_Click(33)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP19"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_34
+               ROW    60
+               COL    544
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Qhtm"
+               ONCHANGE Control_Click(34)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP32"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_35
+               ROW    60
+               COL    576
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "TsBrowse"
+               ONCHANGE Control_Click(35)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP23"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_36
+               ROW    60
+               COL    608
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "ActiveX"
+               ONCHANGE Control_Click(36)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP59"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_37
+               ROW    60
+               COL    640
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Panel"
+               ONCHANGE Control_Click(37)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP64"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_38
+               ROW    60
+               COL    421
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "CheckLabel"
+               ONCHANGE Control_Click(38)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP10"
+        END CHECKBUTTON  
+
+        DEFINE LABEL Label_1
+               ROW    27
+               COL    469
+               WIDTH  42
+               HEIGHT 20
+               VALUE "X-Ctrls"
+               FONTNAME "Times New Roman"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .T.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               RIGHTALIGN .T.
+        END LABEL  
+
+        DEFINE CHECKBUTTON Control_10
+               ROW    27
+               COL    261
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Image"
+               ONCHANGE Control_Click(10)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP17"
+        END CHECKBUTTON  
+
+        DEFINE CHECKBUTTON Control_11
+               ROW    27
+               COL    293
+               WIDTH  32
+               HEIGHT 32
+               CAPTION ""
+               VALUE .F.
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Tree"
+               ONCHANGE Control_Click(11)
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               PICTURE "BITMAP18"
+        END CHECKBUTTON  
+
+    END PAGE 
+
+    PAGE 'Builders'
+
+        DEFINE BUTTONEX XBUTTONEX_10
+               ROW    30
+               COL    5
+               WIDTH  32
+               HEIGHT 32
+               PICTURE "BITMAP37"
+               ICON NIL
+               ACTION MenuBuilder( "MAIN" )
+               FONTNAME "Arial"
+               FONTSIZE 9
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               FONTCOLOR NIL
+               VERTICAL .F.
+               LEFTTEXT .F.
+               UPPERTEXT .F.
+               ADJUST .F.
+               TOOLTIP "Main Menu Builder"
+               BACKCOLOR NIL
+               NOHOTLIGHT .F.
+               FLAT .F.
+               NOTRANSPARENT .F.
+               NOXPSTYLE .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               TABSTOP .T.
+               HANDCURSOR .F.
+               HELPID NIL
+               VISIBLE .T.
+               DEFAULT .F.
+        END BUTTONEX  
+
+        DEFINE BUTTONEX XBUTTONEX_11
+               ROW    30
+               COL    165
+               WIDTH  32
+               HEIGHT 32
+               PICTURE "BITMAP38"
+               ICON NIL
+               ACTION MenuBuilder( "CONTEXT" )
+               FONTNAME "Arial"
+               FONTSIZE 9
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               FONTCOLOR NIL
+               VERTICAL .F.
+               LEFTTEXT .F.
+               UPPERTEXT .F.
+               ADJUST .F.
+               TOOLTIP "Context Menu Builder"
+               BACKCOLOR NIL
+               NOHOTLIGHT .F.
+               FLAT .F.
+               NOTRANSPARENT .F.
+               NOXPSTYLE .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               TABSTOP .T.
+               HANDCURSOR .F.
+               HELPID NIL
+               VISIBLE .T.
+               DEFAULT .F.
+        END BUTTONEX  
+
+        DEFINE BUTTONEX XBUTTONEX_12
+               ROW    30
+               COL    37
+               WIDTH  32
+               HEIGHT 32
+               PICTURE "BITMAP39"
+               ICON NIL
+               ACTION MenuBuilder( "STATUSBAR" )
+               FONTNAME "Arial"
+               FONTSIZE 9
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               FONTCOLOR NIL
+               VERTICAL .F.
+               LEFTTEXT .F.
+               UPPERTEXT .F.
+               ADJUST .F.
+               TOOLTIP "Statusbar Builder"
+               BACKCOLOR NIL
+               NOHOTLIGHT .F.
+               FLAT .F.
+               NOTRANSPARENT .F.
+               NOXPSTYLE .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               TABSTOP .T.
+               HANDCURSOR .F.
+               HELPID NIL
+               VISIBLE .T.
+               DEFAULT .F.
+        END BUTTONEX  
+
+        DEFINE BUTTONEX XBUTTONEX_13
+               ROW    30
+               COL    69
+               WIDTH  32
+               HEIGHT 32
+               PICTURE "BITMAP40"
+               ICON NIL
+               ACTION MenuBuilder( "TOOLBAR" )
+               FONTNAME "Arial"
+               FONTSIZE 9
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               FONTCOLOR NIL
+               VERTICAL .F.
+               LEFTTEXT .F.
+               UPPERTEXT .F.
+               ADJUST .F.
+               TOOLTIP "ToolBar Builder"
+               BACKCOLOR NIL
+               NOHOTLIGHT .F.
+               FLAT .F.
+               NOTRANSPARENT .F.
+               NOXPSTYLE .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               TABSTOP .T.
+               HANDCURSOR .F.
+               HELPID NIL
+               VISIBLE .T.
+               DEFAULT .F.
+        END BUTTONEX  
+
+        DEFINE BUTTONEX XBUTTONEX_14
+               ROW    30
+               COL    133
+               WIDTH  32
+               HEIGHT 32
+               PICTURE "BITMAP41"
+               ICON NIL
+               ACTION MenuBuilder( "NOTIFY" )
+               FONTNAME "Arial"
+               FONTSIZE 9
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               FONTCOLOR NIL
+               VERTICAL .F.
+               LEFTTEXT .F.
+               UPPERTEXT .F.
+               ADJUST .F.
+               TOOLTIP "Notify Menu Builder"
+               BACKCOLOR NIL
+               NOHOTLIGHT .F.
+               FLAT .F.
+               NOTRANSPARENT .F.
+               NOXPSTYLE .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               TABSTOP .T.
+               HANDCURSOR .F.
+               HELPID NIL
+               VISIBLE .T.
+               DEFAULT .F.
+        END BUTTONEX  
+
+        DEFINE BUTTONEX XBUTTONEX_15
+               ROW    30
+               COL    101
+               WIDTH  32
+               HEIGHT 32
+               PICTURE "BITMAP42"
+               ICON NIL
+               ACTION MenuBuilder( "DROPDOWN" )
+               FONTNAME "Arial"
+               FONTSIZE 9
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               FONTCOLOR NIL
+               VERTICAL .F.
+               LEFTTEXT .F.
+               UPPERTEXT .F.
+               ADJUST .F.
+               TOOLTIP "Dropdown Menu Builder"
+               BACKCOLOR NIL
+               NOHOTLIGHT .F.
+               FLAT .F.
+               NOTRANSPARENT .F.
+               NOXPSTYLE .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               TABSTOP .T.
+               HANDCURSOR .F.
+               HELPID NIL
+               VISIBLE .T.
+               DEFAULT .F.
+        END BUTTONEX  
+
+    END PAGE 
+
+    PAGE 'User Components'
+
+        DEFINE FRAME XFrame_1
+               ROW    30
+               COL    10
+               WIDTH  210
+               HEIGHT 59
+               FONTNAME "Arial"
+               FONTSIZE 9
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               CAPTION NIL
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               OPAQUE .T.
+               TRANSPARENT .F.
+               INVISIBLE .F.
+        END FRAME  
+
+        DEFINE COMBOBOX XCombo_1
+               ROW    50
+               COL    25
+               WIDTH  180
+               HEIGHT 80
+               ITEMS {""}
+               VALUE 0
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               SORT .F.
+               ONENTER NIL
+               ONDISPLAYCHANGE NIL
+               DISPLAYEDIT .F.
+               ONLISTDISPLAY ReloadUci()
+        END COMBOBOX  
+
+    END PAGE 
+
+  END TAB 
+
+END WINDOW
+
+

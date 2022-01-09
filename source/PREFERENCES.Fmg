@@ -1,0 +1,2310 @@
+*HMGS-MINIGUI-IDE Two-Way Form Designer Generated Code
+*OPEN SOURCE PROJECT 2005-2016 Walter Formigoni http://sourceforge.net/projects/hmgs-minigui/
+
+DEFINE WINDOW TEMPLATE AT 135 , 331 WIDTH 557 HEIGHT 790 VIRTUAL WIDTH NIL VIRTUAL HEIGHT NIL TITLE "Preferences" ICON NIL MODAL CURSOR NIL ON INIT INITPREFERENCES() ON RELEASE NIL ON INTERACTIVECLOSE NIL ON MOUSECLICK NIL ON MOUSEDRAG NIL ON MOUSEMOVE NIL ON MOVE NIL ON DROPFILES NIL ON SIZE NIL ON PAINT NIL BACKCOLOR {181,216,248} ON GOTFOCUS NIL ON LOSTFOCUS NIL ON SCROLLUP NIL ON SCROLLDOWN NIL ON SCROLLLEFT NIL ON SCROLLRIGHT NIL ON HSCROLLBOX NIL ON VSCROLLBOX NIL
+
+     DEFINE FRAME Frame_1
+            ROW    10
+            COL    10
+            WIDTH  155
+            HEIGHT 150
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            CAPTION "Linker"
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            OPAQUE .F.
+            TRANSPARENT .T.
+            INVISIBLE .F.
+     END FRAME  
+
+     DEFINE FRAME Frame_2
+            ROW    10
+            COL    175
+            WIDTH  364
+            HEIGHT 240
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            CAPTION "General"
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            OPAQUE .F.
+            TRANSPARENT .T.
+            INVISIBLE .F.
+     END FRAME  
+
+     DEFINE FRAME Frame_3
+            ROW    252
+            COL    10
+            WIDTH  530
+            HEIGHT 90
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            CAPTION "Additional Libraries (Full Path. Semicolon Delimited)"
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            OPAQUE .F.
+            TRANSPARENT .T.
+            INVISIBLE .F.
+     END FRAME  
+
+     DEFINE EDITBOX Text_19
+            ROW    271
+            COL    20
+            WIDTH  510
+            HEIGHT 62
+            VALUE ""
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            READONLY .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            HSCROLLBAR  .F.
+            VSCROLLBAR  .T.
+     END EDITBOX  
+
+     DEFINE CHECKBOX Check_1
+            ROW    30
+            COL    25
+            WIDTH  100
+            HEIGHT 28
+            CAPTION "ADS Support"
+            VALUE .F.
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            ONENTER NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .T.
+            AUTOSIZE .F.
+     END CHECKBOX  
+
+     DEFINE CHECKBOX Check_2
+            ROW    60
+            COL    25
+            WIDTH  100
+            HEIGHT 28
+            CAPTION "MySql Support"
+            VALUE .F.
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            ONENTER NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .T.
+            AUTOSIZE .F.
+     END CHECKBOX  
+
+     DEFINE CHECKBOX Check_3
+            ROW    90
+            COL    25
+            WIDTH  100
+            HEIGHT 28
+            CAPTION "ODBC Support"
+            VALUE .F.
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            ONENTER NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .T.
+            AUTOSIZE .F.
+     END CHECKBOX  
+
+     DEFINE CHECKBOX Check_4
+            ROW    120
+            COL    25
+            WIDTH  100
+            HEIGHT 28
+            CAPTION "ZIP Support"
+            VALUE .F.
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            ONENTER NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            BACKCOLOR {181,216,248}
+            FONTCOLOR NIL
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .T.
+            AUTOSIZE .F.
+     END CHECKBOX  
+
+     DEFINE BUTTON Button_19
+            ROW    560
+            COL    340
+            WIDTH  90
+            HEIGHT 28
+            ACTION savepreferences()
+            CAPTION "OK"
+            FONTNAME  "Arial"
+            FONTSIZE 9
+            TOOLTIP  ""
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            HELPID NIL
+            FLAT .F.
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .F.
+            MULTILINE .F.
+            NOXPSTYLE .F.
+     END BUTTON  
+
+     DEFINE BUTTON Button_20
+            ROW    560
+            COL    450
+            WIDTH  90
+            HEIGHT 28
+            ACTION closepreferences()
+            CAPTION "Cancel"
+            FONTNAME  "Arial"
+            FONTSIZE 9
+            TOOLTIP  ""
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            HELPID NIL
+            FLAT .F.
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .F.
+            MULTILINE .F.
+            NOXPSTYLE .F.
+     END BUTTON  
+
+     DEFINE CHECKBOX Check_5
+            ROW    500
+            COL    30
+            WIDTH  100
+            HEIGHT 24
+            CAPTION "Console Mode"
+            VALUE .F.
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            ONENTER NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .T.
+            AUTOSIZE .F.
+     END CHECKBOX  
+
+     DEFINE RADIOGROUP RadioGroup_3
+            ROW    461
+            COL    30
+            WIDTH  150
+            HEIGHT 28
+            OPTIONS {'Harbour','Xharbour'}
+            VALUE 1
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE FillAddPreferences()
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .T.
+            SPACING 5
+            BACKCOLOR {181,216,248}
+            FONTCOLOR NIL
+            READONLY NIL
+            HORIZONTAL .T.
+     END RADIOGROUP  
+
+     DEFINE FRAME Frame_4
+            ROW    400
+            COL    10
+            WIDTH  320
+            HEIGHT 185
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            CAPTION "Compile Options"
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            OPAQUE .F.
+            TRANSPARENT .T.
+            INVISIBLE .F.
+     END FRAME  
+
+     DEFINE FRAME Frame_5
+            ROW    164
+            COL    10
+            WIDTH  156
+            HEIGHT 85
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            CAPTION "Save Options"
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            OPAQUE .F.
+            TRANSPARENT .T.
+            INVISIBLE .F.
+     END FRAME  
+
+     DEFINE RADIOGROUP RadioGroup_6
+            ROW    186
+            COL    25
+            WIDTH  102
+            HEIGHT 50
+            OPTIONS {'Reduced Code','Normal Code'}
+            VALUE 1
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .T.
+            SPACING 26
+            BACKCOLOR {181,216,248}
+            FONTCOLOR NIL
+            READONLY NIL
+            HORIZONTAL .F.
+     END RADIOGROUP  
+
+     DEFINE CHECKBOX Check_7
+            ROW    530
+            COL    30
+            WIDTH  120
+            HEIGHT 24
+            CAPTION "Disable Warnings"
+            VALUE .F.
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            ONENTER NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .T.
+            AUTOSIZE .F.
+     END CHECKBOX  
+
+     DEFINE CHECKBOX Check_6
+            ROW    500
+            COL    175
+            WIDTH  80
+            HEIGHT 24
+            CAPTION "GUI"
+            VALUE .T.
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            ONENTER NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .T.
+            AUTOSIZE .F.
+     END CHECKBOX  
+
+     DEFINE FRAME Frame_6
+            ROW    400
+            COL    340
+            WIDTH  200
+            HEIGHT 48
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            CAPTION "Layout"
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            OPAQUE .T.
+            TRANSPARENT .T.
+            INVISIBLE .F.
+     END FRAME  
+
+     DEFINE RADIOGROUP RadioGroup_4
+            ROW    415
+            COL    351
+            WIDTH  70
+            HEIGHT 20
+            OPTIONS {'Normal','Reduced'}
+            VALUE 1
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .F.
+            SPACING 20
+            BACKCOLOR {181,216,248}
+            FONTCOLOR NIL
+            READONLY NIL
+            HORIZONTAL .T.
+     END RADIOGROUP  
+
+     DEFINE FRAME Frame_7
+            ROW    345
+            COL    10
+            WIDTH  530
+            HEIGHT 53
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            CAPTION "Additional Include Paths (path1;path2;...pathn;)"
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            OPAQUE .T.
+            TRANSPARENT .T.
+            INVISIBLE .F.
+     END FRAME  
+
+     DEFINE TEXTBOX Text_20
+            ROW    365
+            COL    20
+            WIDTH  510
+            HEIGHT 24
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            ONENTER NIL
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            READONLY .F.
+            RIGHTALIGN .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            INPUTMASK NIL
+            FORMAT NIL
+            VALUE ""
+     END TEXTBOX 
+
+     DEFINE RADIOGROUP RadioGroup_2
+            ROW    438
+            COL    30
+            WIDTH  72
+            HEIGHT 28
+            OPTIONS {'BCC58','Mingw32','Mingw64'}
+            VALUE 1
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE FillAddPreferences()
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .F.
+            SPACING 5
+            BACKCOLOR {181,216,248}
+            FONTCOLOR NIL
+            READONLY NIL
+            HORIZONTAL .T.
+     END RADIOGROUP  
+
+     DEFINE CHECKBOX Check_8
+            ROW    530
+            COL    175
+            WIDTH  100
+            HEIGHT 24
+            CAPTION "UPX"
+            VALUE .F.
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP "UPX.EXE must be present inside Output folder. For better results use latest upx version at http://upx.sourceforge.net/"
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            ONENTER NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .T.
+            AUTOSIZE .F.
+     END CHECKBOX  
+
+     DEFINE FRAME Frame_8
+            ROW    450
+            COL    340
+            WIDTH  200
+            HEIGHT 48
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            CAPTION "Build type"
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            OPAQUE .T.
+            TRANSPARENT .T.
+            INVISIBLE .F.
+     END FRAME  
+
+     DEFINE RADIOGROUP RadioGroup_5
+            ROW    465
+            COL    351
+            WIDTH  70
+            HEIGHT 20
+            OPTIONS {'Full','Reduced'}
+            VALUE 1
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .F.
+            SPACING 20
+            BACKCOLOR {181,216,248}
+            FONTCOLOR NIL
+            READONLY NIL
+            HORIZONTAL .T.
+     END RADIOGROUP  
+
+  DEFINE TAB Tab_1 AT 31,175 WIDTH 364 HEIGHT 219 VALUE 1 FONT "Arial" SIZE 9 TOOLTIP "" ON CHANGE NIL BACKCOLOR {181,216,248}
+
+    PAGE 'MiniGUI'
+
+        DEFINE LABEL Label_1
+               ROW    35
+               COL    10
+               WIDTH  100
+               HEIGHT 20
+               VALUE "Minigui Folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_2
+               ROW    65
+               COL    10
+               WIDTH  100
+               HEIGHT 20
+               VALUE "BCC Folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_3
+               ROW    95
+               COL    10
+               WIDTH  100
+               HEIGHT 20
+               VALUE "Harbour Folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_4
+               ROW    125
+               COL    10
+               WIDTH  100
+               HEIGHT 20
+               VALUE "Xharbour Folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_5
+               ROW    155
+               COL    10
+               WIDTH  100
+               HEIGHT 20
+               VALUE "Program Editor:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_6
+               ROW    185
+               COL    10
+               WIDTH  100
+               HEIGHT 24
+               VALUE "Output folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE TEXTBOX Text_1
+               ROW    35
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_2
+               ROW    65
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_3
+               ROW    95
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_4
+               ROW    125
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_5
+               ROW    155
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_6
+               ROW    185
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE BUTTON Button_1
+               ROW    35
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_1')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_2
+               ROW    65
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_2')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_3
+               ROW    95
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_3')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_4
+               ROW    125
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_4')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_5
+               ROW    155
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfile('Text_5')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_6
+               ROW    185
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_6')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+    END PAGE 
+
+    PAGE 'HMG 2'
+
+        DEFINE LABEL Label_7
+               ROW    35
+               COL    10
+               WIDTH  100
+               HEIGHT 24
+               VALUE "HMG Folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_8
+               ROW    65
+               COL    10
+               WIDTH  100
+               HEIGHT 24
+               VALUE "Mingw32 Folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_9
+               ROW    95
+               COL    10
+               WIDTH  100
+               HEIGHT 24
+               VALUE "Harbour Folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_10
+               ROW    125
+               COL    10
+               WIDTH  100
+               HEIGHT 24
+               VALUE "Xharbour Folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_11
+               ROW    155
+               COL    10
+               WIDTH  100
+               HEIGHT 20
+               VALUE "Program Editor:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_12
+               ROW    185
+               COL    10
+               WIDTH  100
+               HEIGHT 24
+               VALUE "Output Folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE TEXTBOX Text_7
+               ROW    35
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_8
+               ROW    65
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_9
+               ROW    95
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_10
+               ROW    125
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_11
+               ROW    155
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP "Full path"
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_12
+               ROW    185
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE BUTTON Button_7
+               ROW    35
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_7')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_8
+               ROW    65
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_8')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_9
+               ROW    95
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_9')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_10
+               ROW    125
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_10')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_11
+               ROW    155
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfile('Text_11')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_12
+               ROW    185
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_12')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+    END PAGE 
+
+    PAGE 'Minigui with MINGW32'
+
+        DEFINE LABEL Label_13
+               ROW    35
+               COL    10
+               WIDTH  100
+               HEIGHT 20
+               VALUE "Minigui Folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_14
+               ROW    65
+               COL    10
+               WIDTH  100
+               HEIGHT 20
+               VALUE "Mingw32 Folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_15
+               ROW    95
+               COL    10
+               WIDTH  100
+               HEIGHT 20
+               VALUE "Harbour Folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_16
+               ROW    125
+               COL    10
+               WIDTH  100
+               HEIGHT 20
+               VALUE "Xharbour Folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_17
+               ROW    155
+               COL    10
+               WIDTH  100
+               HEIGHT 20
+               VALUE "Program Editor:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE LABEL Label_18
+               ROW    185
+               COL    10
+               WIDTH  100
+               HEIGHT 20
+               VALUE "Output Folder:"
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               HELPID NIL
+               VISIBLE .T.
+               TRANSPARENT .T.
+               ACTION NIL
+               ONMOUSEHOVER NIL
+               ONMOUSELEAVE NIL
+               AUTOSIZE .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+        END LABEL  
+
+        DEFINE TEXTBOX Text_13
+               ROW    35
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_14
+               ROW    65
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_15
+               ROW    95
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_16
+               ROW    125
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_17
+               ROW    155
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE TEXTBOX Text_18
+               ROW    185
+               COL    110
+               WIDTH  200
+               HEIGHT 24
+               FONTNAME "Arial"
+               FONTSIZE 9
+               TOOLTIP ""
+               ONCHANGE NIL
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONENTER NIL
+               HELPID NIL
+               TABSTOP .T.
+               VISIBLE .T.
+               READONLY .F.
+               RIGHTALIGN .F.
+               BACKCOLOR NIL
+               FONTCOLOR NIL
+               INPUTMASK NIL
+               FORMAT NIL
+               VALUE ""
+        END TEXTBOX 
+
+        DEFINE BUTTON Button_13
+               ROW    35
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_13')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_14
+               ROW    65
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_14')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_15
+               ROW    95
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_15')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_16
+               ROW    125
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_16')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_17
+               ROW    155
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfile('Text_17')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+        DEFINE BUTTON Button_18
+               ROW    185
+               COL    310
+               WIDTH  30
+               HEIGHT 25
+               ACTION addfolder('Text_18')
+               CAPTION "..."
+               FONTNAME  "Arial"
+               FONTSIZE 9
+               TOOLTIP  ""
+               FONTBOLD .F.
+               FONTITALIC .F.
+               FONTUNDERLINE .F.
+               FONTSTRIKEOUT .F.
+               ONGOTFOCUS NIL
+               ONLOSTFOCUS NIL
+               HELPID NIL
+               FLAT .F.
+               TABSTOP .T.
+               VISIBLE .T.
+               TRANSPARENT .F.
+               MULTILINE .F.
+               NOXPSTYLE .F.
+        END BUTTON  
+
+    END PAGE 
+
+  END TAB 
+
+     DEFINE RADIOGROUP RadioGroup_1
+            ROW    415
+            COL    30
+            WIDTH  150
+            HEIGHT 50
+            OPTIONS {'Minigui','HMG 2'}
+            VALUE 1
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE FillAddPreferences()
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .F.
+            SPACING 5
+            BACKCOLOR {181,216,248}
+            FONTCOLOR NIL
+            READONLY NIL
+            HORIZONTAL .T.
+     END RADIOGROUP  
+
+     DEFINE FRAME Frame_9
+            ROW    500
+            COL    340
+            WIDTH  200
+            HEIGHT 48
+            FONTNAME "Arial"
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            CAPTION "MultiThread"
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            OPAQUE .T.
+            TRANSPARENT .T.
+            INVISIBLE .F.
+     END FRAME  
+
+     DEFINE RADIOGROUP RadioGroup_MT
+            ROW    515
+            COL    351
+            WIDTH  70
+            HEIGHT 50
+            OPTIONS {'Yes','No'}
+            VALUE 2
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP "NOTE! You must have an MT enadled Harbour distribution for this option to work.."
+            ONCHANGE NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .F.
+            SPACING 20
+            BACKCOLOR {181,216,248}
+            FONTCOLOR NIL
+            READONLY NIL
+            HORIZONTAL .T.
+     END RADIOGROUP  
+
+     DEFINE FRAME Frame_10
+            ROW    590
+            COL    10
+            WIDTH  530
+            HEIGHT 150
+            FONTNAME 'Arial'
+            FONTSIZE 9
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            CAPTION NIL
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            OPAQUE .T.
+            TRANSPARENT .T.
+            INVISIBLE .F.
+     END FRAME  
+
+     DEFINE LABEL Label_21
+            ROW    610
+            COL    20
+            WIDTH  80
+            HEIGHT 24
+            VALUE "Prg flag"
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            VISIBLE .T.
+            TRANSPARENT .T.
+            ACTION NIL
+            ONMOUSEHOVER NIL
+            ONMOUSELEAVE NIL
+            AUTOSIZE .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+     END LABEL  
+
+     DEFINE LABEL Label_22
+            ROW    640
+            COL    20
+            WIDTH  80
+            HEIGHT 24
+            VALUE "C flag"
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            VISIBLE .T.
+            TRANSPARENT .T.
+            ACTION NIL
+            ONMOUSEHOVER NIL
+            ONMOUSELEAVE NIL
+            AUTOSIZE .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+     END LABEL  
+
+     DEFINE TEXTBOX txt_pflag
+            ROW    610
+            COL    100
+            WIDTH  420
+            HEIGHT 24
+            FONTNAME 'Arial'
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            ONENTER NIL
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            READONLY .F.
+            RIGHTALIGN .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            INPUTMASK NIL
+            FORMAT NIL
+            VALUE ""
+     END TEXTBOX 
+
+     DEFINE TEXTBOX txt_cflag
+            ROW    640
+            COL    100
+            WIDTH  420
+            HEIGHT 24
+            FONTNAME 'Arial'
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            ONENTER NIL
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            READONLY .F.
+            RIGHTALIGN .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            INPUTMASK NIL
+            FORMAT NIL
+            VALUE ""
+     END TEXTBOX 
+
+     DEFINE LABEL Label_19
+            ROW    670
+            COL    20
+            WIDTH  80
+            HEIGHT 24
+            VALUE "LIB path"
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            VISIBLE .T.
+            TRANSPARENT .T.
+            ACTION NIL
+            ONMOUSEHOVER NIL
+            ONMOUSELEAVE NIL
+            AUTOSIZE .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+     END LABEL  
+
+     DEFINE TEXTBOX Txt_lib
+            ROW    670
+            COL    100
+            WIDTH  420
+            HEIGHT 24
+            FONTNAME 'Arial'
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            ONENTER NIL
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            READONLY .F.
+            RIGHTALIGN .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            INPUTMASK NIL
+            FORMAT NIL
+            VALUE ""
+     END TEXTBOX 
+
+     DEFINE LABEL Label_20
+            ROW    700
+            COL    20
+            WIDTH  80
+            HEIGHT 24
+            VALUE "INC path"
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            VISIBLE .T.
+            TRANSPARENT .T.
+            ACTION NIL
+            ONMOUSEHOVER NIL
+            ONMOUSELEAVE NIL
+            AUTOSIZE .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+     END LABEL  
+
+     DEFINE TEXTBOX txt_inc
+            ROW    700
+            COL    100
+            WIDTH  420
+            HEIGHT 24
+            FONTNAME 'Arial'
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            ONENTER NIL
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            READONLY .F.
+            RIGHTALIGN .F.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+            INPUTMASK NIL
+            FORMAT NIL
+            VALUE ""
+     END TEXTBOX 
+
+END WINDOW
+
+

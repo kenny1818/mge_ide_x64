@@ -1,0 +1,83 @@
+*HMGS-MINIGUI-IDE Two-Way Form Designer Generated Code
+*OPEN SOURCE PROJECT 2005-2016 Walter Formigoni http://sourceforge.net/projects/hmgs-minigui/
+
+DEFINE WINDOW TEMPLATE AT 239 , 285 WIDTH 640 HEIGHT 480 VIRTUAL WIDTH NIL VIRTUAL HEIGHT NIL TITLE "Form Code" ICON NIL PANEL CURSOR NIL ON INIT RESIZE_VFC() ON RELEASE NIL ON INTERACTIVECLOSE NIL ON MOUSECLICK NIL ON MOUSEDRAG NIL ON MOUSEMOVE NIL ON MOVE NIL ON DROPFILES NIL ON SIZE RESIZE_VFC() ON MAXIMIZE RESIZE_VFC() ON MINIMIZE NIL ON PAINT NIL BACKCOLOR NIL ON GOTFOCUS NIL ON LOSTFOCUS NIL ON SCROLLUP NIL ON SCROLLDOWN NIL ON SCROLLLEFT NIL ON SCROLLRIGHT NIL ON HSCROLLBOX NIL ON VSCROLLBOX NIL
+
+     DEFINE EDITBOX Edit_1
+            ROW    43
+            COL    0
+            WIDTH  631
+            HEIGHT 400
+            VALUE ""
+            FONTNAME "Courier New"
+            FONTSIZE 9
+            TOOLTIP ""
+            ONCHANGE NIL
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            FONTBOLD .T.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            TABSTOP .T.
+            VISIBLE .T.
+            READONLY .F.
+            BACKCOLOR {255,255,225}
+            FONTCOLOR NIL
+            HSCROLLBAR  .T.
+            VSCROLLBAR  .T.
+     END EDITBOX  
+
+     DEFINE BUTTON Button_1
+            ROW    10
+            COL    10
+            WIDTH  100
+            HEIGHT 28
+            ACTION SaveViewFormCode()
+            CAPTION "Save"
+            FONTNAME  "Arial"
+            FONTSIZE 9
+            TOOLTIP  ""
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            ONGOTFOCUS NIL
+            ONLOSTFOCUS NIL
+            HELPID NIL
+            FLAT .F.
+            TABSTOP .T.
+            VISIBLE .T.
+            TRANSPARENT .F.
+           MULTILINE .F.
+           NOXPSTYLE .F.
+     END BUTTON  
+
+     DEFINE LABEL Label_1
+            ROW    10
+            COL    120
+            WIDTH  45
+            HEIGHT 21
+            VALUE "Label_1"
+            FONTNAME "Arial"
+            FONTSIZE 9
+            TOOLTIP ""
+            FONTBOLD .F.
+            FONTITALIC .F.
+            FONTUNDERLINE .F.
+            FONTSTRIKEOUT .F.
+            HELPID NIL
+            VISIBLE .T.
+            TRANSPARENT .F.
+            ACTION NIL
+            ONMOUSEHOVER NIL
+            ONMOUSELEAVE NIL
+            AUTOSIZE .T.
+            BACKCOLOR NIL
+            FONTCOLOR NIL
+     END LABEL  
+
+END WINDOW
+
+
